@@ -1,0 +1,27 @@
+body {
+  font-family: "Montserrat", serif;
+  //   transition: all ease-in-out 1s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: initial;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button {
+  width: 100%;
+}
+
+.custom_container {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1170px;
+}

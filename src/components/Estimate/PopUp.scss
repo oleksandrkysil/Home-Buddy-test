@@ -1,0 +1,204 @@
+.popUp {
+  .modal-dialog {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+  }
+  .modal-header {
+    padding: 0;
+    justify-content: flex-end;
+    border-bottom: none;
+  }
+  .btn-close {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    background: url(./../../assets/icons/close.svg);
+    background-size: cover;
+    margin: 16px;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &__progressBar {
+    width: 100%;
+    height: 4px;
+    background: #f5f6fe;
+    position: relative;
+  }
+
+  &__progressBar_half {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #52c41a;
+    }
+  }
+
+  &__progressBar_half_show {
+    width: 50%;
+    animation: line1 0.6s linear 0s;
+    animation-iteration-count: 1;
+  }
+
+  &__progressBar_full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #52c41a;
+    }
+  }
+
+  &__progressBar_full_show {
+    width: 100%;
+    animation: line2 0.6s linear 0s;
+    animation-iteration-count: 1;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__firstStep {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__firstStep_show {
+    opacity: 1;
+    pointer-events: all;
+    animation: steps 0.6s linear 0s;
+    animation-iteration-count: 1;
+  }
+
+  &__secondStep {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__secondStep_show {
+    opacity: 1;
+    pointer-events: all;
+    animation: steps 0.6s linear 0s;
+    animation-iteration-count: 1;
+  }
+
+  &__title {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #222222;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__details,
+  &__info {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    color: #646464;
+    display: block;
+  }
+
+  &__details {
+    margin-bottom: 16px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .popUp {
+    .btn-close {
+      margin: 24px 42px;
+    }
+
+    &__form {
+      max-width: 765px;
+      margin: 80px auto;
+    }
+
+    &__title {
+      font-size: 25px;
+      line-height: 36px;
+      margin-bottom: 24px;
+    }
+
+    &__firstStep {
+      text-align: center;
+    }
+
+    &__details {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@keyframes steps {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes line1 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes line2 {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 100%;
+  }
+}

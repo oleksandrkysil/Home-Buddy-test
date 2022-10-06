@@ -1,0 +1,44 @@
+.btn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  outline: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 16px 24px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &.theme1 {
+    color: #fff;
+    background-color: #fa8c16;
+    transition: all ease-in-out 0.4s;
+
+    &:hover {
+      color: #fff;
+      background-color: #f16e00;
+    }
+
+    &:focus {
+      background-color: #f16e00;
+    }
+
+    &:active {
+      background-color: #e16803;
+    }
+
+    &:disabled {
+      background-color: #fcc58a;
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    width: auto;
+  }
+}

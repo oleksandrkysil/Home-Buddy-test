@@ -1,0 +1,72 @@
+.radioContainer {
+  display: block;
+  margin-bottom: 8px;
+
+  &:last-of-type {
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+
+    &:checked + .radioContainer__label {
+      border: 2px solid #fa8c16;
+    }
+  }
+
+  &__label {
+    border: 2px solid #f5f6fe;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 40px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #000;
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .popUp {
+    .radioContainer {
+      display: inline-block;
+      margin-bottom: 24px;
+      margin-left: 16px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &__label {
+        flex-direction: column;
+        width: 168px;
+      }
+
+      &__icon {
+        width: 56px;
+      }
+
+      &__title {
+        margin-top: 20px;
+        margin-bottom: 8px;
+        margin-left: 0;
+      }
+    }
+  }
+}
